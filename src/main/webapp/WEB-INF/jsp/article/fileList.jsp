@@ -41,6 +41,18 @@ $(document).ready(function() {
         });
 	});
 	
+	$('body').on('click', '#addBtn', function(e) {
+		var i = $('[name=major3]').find('div').length;
+		
+		var appendHtml = '';
+		appendHtml += '<div>';
+		appendHtml += '	' + '<input type="text" name="fileArticleList[' + i + '].title"/>';
+		appendHtml += '	' + '<input type="text" name="fileArticleList[' + i + '].content"/>';
+		appendHtml += '	' + '<input type="file" name="fileArticleList[' + i + '].demoFile"/>';
+		appendHtml += '</div>';
+		$('[name=major3]').append(appendHtml);
+	});
+	
 	$('body').on('click', '#saveBtn3', function(e) {
 		e.preventDefault();
 		
@@ -64,33 +76,33 @@ $(document).ready(function() {
 		
 	</head>
 	<body>
-		<form id="major" name="major" method="post">
-			<input type="text" name="title" value="11"/>
-			<input type="text" name="content" value="22"/>
-			<button type="button" id="saveBtn">저장</button>
-		</form>
+		<div>
+			<form id="major" name="major" method="post">
+				<input type="text" name="title" value="11"/>
+				<input type="text" name="content" value="22"/>
+				<button type="button" id="saveBtn">저장</button>
+			</form>
+		</div>
 		
-		<form id="major2" name="major2" method="post">
-			<input type="text" name="title" value="11"/>
-			<input type="text" name="content" value="22"/>
-			<input type="file" name="demoFile">
-			<button type="button" id="saveBtn2">저장</button>
-		</form>
+		<div>
+			<form id="major2" name="major2" method="post">
+				<input type="text" name="title" value="11"/>
+				<input type="text" name="content" value="22"/>
+				<input type="file" name="demoFile">
+				<button type="button" id="saveBtn2">저장</button>
+			</form>
+		</div>
 		
-		<form id="major3" name="major3" method="post">
-			<input type="text" name="fileArticleList[0].title" value="11"/>
-			<input type="text" name="fileArticleList[0].content" value="111"/>
-			<input type="file" name="fileArticleList[0].demoFile">
-			</br>
-			<input type="text" name="fileArticleList[1].title" value="22"/>
-			<input type="text" name="fileArticleList[1].content" value="222"/>
-			<input type="file" name="fileArticleList[1].demoFile">
-			</br>
-			<input type="text" name="fileArticleList[2].title" value="33"/>
-			<input type="text" name="fileArticleList[2].content" value="333"/>
-			<input type="file" name="fileArticleList[2].demoFile">
-			</br>
+		<div>
+			<button type="button" id="addBtn">추가</button>
+			<form id="major3" name="major3" method="post">
+				<div>
+					<input type="text" name="fileArticleList[0].title" value="11"/>
+					<input type="text" name="fileArticleList[0].content" value="111"/>
+					<input type="file" name="fileArticleList[0].demoFile">
+				</div>
+			</form>
 			<button type="button" id="saveBtn3">저장</button>
-		</form>
+		</div>
 	</body>
 </html>
