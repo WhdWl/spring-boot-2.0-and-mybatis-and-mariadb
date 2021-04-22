@@ -1,11 +1,10 @@
 package com.sbs.starter.service;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.sbs.starter.dto.Article;
 import org.springframework.stereotype.Service;
 
-import com.sbs.starter.dto.Article;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service(value="articleService")
 public class ArticleServiceImpl implements ArticleService {
