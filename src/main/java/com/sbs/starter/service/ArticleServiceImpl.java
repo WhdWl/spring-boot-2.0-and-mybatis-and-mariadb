@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.sbs.starter.dto.Article;
 
-@Service("articleService")
+@Service(value="articleService")
 public class ArticleServiceImpl implements ArticleService {
 
 	@Override
