@@ -10,6 +10,7 @@ class StarterApplicationTests {
 
 	@Test
 	void contextLoads() {
+		
 		int a[] = {1, 2, 3};
 
 		int b[][] = {
